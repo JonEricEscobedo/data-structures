@@ -29,7 +29,4 @@ var Queue = function() {
   return someInstance;
 };
 
-// {0:'a', 0:'b'}
-// dequeue --> return 'a'
-// {1: b, 2: c}
-
+// {0: 'a', 1: 'b', 2: 'c'}
