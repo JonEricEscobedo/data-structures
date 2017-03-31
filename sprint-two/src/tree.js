@@ -27,7 +27,7 @@ treeMethods.contains = function(target) {
 				searchChildren(child.children[i]);
 			}
 		}
-	}
+	};
 
 
 	// 	// Base case
@@ -37,6 +37,7 @@ treeMethods.contains = function(target) {
 	// 		// Recursive case
 	// 		for (var idx = 0; idx < this.children.length; idx++) {
 	// 			searchChildren(this.children[idx]);
+
 	// 		}
 	// 	}
 		
@@ -49,4 +50,8 @@ treeMethods.contains = function(target) {
 
 /*
  * Complexity: What is the time complexity of the above functions?
+ *
+ * Answer:
+ * addChild has constant time complexity.
+ * searchChildren has linear time complexity.
  */
