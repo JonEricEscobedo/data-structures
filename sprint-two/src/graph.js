@@ -21,10 +21,8 @@ Graph.prototype.removeNode = function(node) {
 
   for (var i = 0; i < this[node].length; i++) {
     var element = this[node][i];
-    // this[node][i] = null;
     this.removeEdge(element, node);
-    this[node].unshift(node); // Maintain length of array
-                              // while for loop runs
+    this[node].unshift(node);
   }
 
   delete this[node];
@@ -52,7 +50,7 @@ Graph.prototype.removeEdge = function(fromNode, toNode) {
 
 // Pass in a callback which will be executed on each node of the graph.
 Graph.prototype.forEachNode = function(cb) {
-  _.each(this, function(value, key, col) {
+  _.each(this, function(value, key) {
     cb(key);
   });
 };
