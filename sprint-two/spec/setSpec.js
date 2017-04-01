@@ -24,4 +24,14 @@ describe('set', function() {
     expect(set.contains('Mel Gibson')).to.equal(false);
   });
 
+  it('*NEW* should add remove multiple values from a set', function() {
+    set.add('Mel Gibson');
+    set.add('Danny Glover');
+    set.add('Susan Sarandon');
+    set.remove('Mel Gibson');
+    set.remove('Susan Sarandon');
+    expect(set.contains('Danny Glover')).to.equal(true);
+    expect(set.contains('Susan Sarandon')).to.equal(false);
+  });
+
 });
