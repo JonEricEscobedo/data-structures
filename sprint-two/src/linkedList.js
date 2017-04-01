@@ -5,15 +5,13 @@ var LinkedList = function() {
 
   list.addToTail = function(value) {
     var newNode = Node(value);
-    if (list.tail !== null) { 
-      list.head = list.tail;
-      list.tail.next = newNode;
-    }
-
-    list.tail = newNode;
 
     if (list.head === null) {
-      list.head = list.tail;
+      list.head = newNode;
+      list.tail = newNode;
+    } else {
+      list.tail.next = newNode;
+      list.tail = newNode;
     }
 
   };
