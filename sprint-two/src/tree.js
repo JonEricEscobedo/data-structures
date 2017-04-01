@@ -29,19 +29,6 @@ treeMethods.contains = function(target) {
 		}
 	};
 
-
-	// 	// Base case
-	// 	if (child.value === target) {
-	// 		truthy = true;
-	// 	} else {
-	// 		// Recursive case
-	// 		for (var idx = 0; idx < this.children.length; idx++) {
-	// 			searchChildren(this.children[idx]);
-
-	// 		}
-	// 	}
-		
-	// }
 	searchChildren(this);
 	return truthy;
 };
