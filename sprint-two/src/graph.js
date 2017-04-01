@@ -18,8 +18,13 @@ Graph.prototype.contains = function(node) {
 
 // Removes a node from the graph.
 Graph.prototype.removeNode = function(node) {
+
   for (var i = 0; i < this[node].length; i++) {
-    this.removeEdge(this[node][i], node);
+    var element = this[node][i];
+    // this[node][i] = null;
+    this.removeEdge(element, node);
+    this[node].unshift(node); // Maintain length of array
+                              // while for loop runs
   }
 
   delete this[node];

@@ -41,7 +41,7 @@ describe('tree', function() {
     expect(tree.contains(8)).to.equal(true);
   });
 
-  it('should correctly detect deeper nested children', function() {
+  it('*NEW* should correctly detect deeper nested children', function() {
     tree.addChild(5);
     tree.addChild(6);
     tree.addChild(10);
